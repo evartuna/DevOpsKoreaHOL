@@ -33,6 +33,7 @@ jobs:
            
     - name: git    
       run: |
+           git pull
            rm .gitignore
            git add _site 
            git commit -m "up" 
