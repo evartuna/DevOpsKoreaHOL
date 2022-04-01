@@ -21,3 +21,9 @@ jobs:
       run: dotnet run -p generator/src/generator.csproj -- . "http://localhost:8000/" _site
     - name: Run
       run: ./copy-assets.bash _site
+    - name: git
+      run: |
+           git add _site 
+           git commit -m "up" 
+           git subtree push --prefix _site origin gh_pages
+           
