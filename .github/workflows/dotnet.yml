@@ -23,6 +23,8 @@ jobs:
       run: ./copy-assets.bash _site
     - name: git
       run: |
+           git config --global user.email "kwang1406@gmail.com"
+           git config --global user.name "evartuna"
            git add _site 
            git commit -m "up" 
            git subtree push --prefix _site origin gh_pages
